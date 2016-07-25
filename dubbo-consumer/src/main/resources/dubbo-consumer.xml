@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans          
+    http://www.springframework.org/schema/beans/spring-beans.xsd          
+    http://code.alibabatech.com/schema/dubbo          
+    http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+		
+	<!-- 调用方配置 -->
+
+	<!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
+	<dubbo:application name="dubbo-consumer" />
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	<dubbo:registry protocol="zookeeper" address="192.168.85.128:2181,192.168.85.128:2182" />
+	<!-- 监控中心地址 -->
+<!-- 	<dubbo:monitor address="dubbo://192.168.85.128:5050/com.alibaba.dubbo.monitor.MonitorService" /> -->
+	<!-- 生成远程服务代理，可以像使用本地bean一样使用demoService check 当有服务出现循环依赖的时候设置 -->
+	<dubbo:reference id="demoService" interface="com.dubbo.service.DubboService" />
+	
+	<!-- <dubbo:application name="tpp-credit-consumer" />
+	<dubbo:registry protocol="zookeeper" address="${tpp.dubbo.registry.address}"/> 
+	<dubbo:registry protocol="zookeeper" address="zookeeper://172.16.230.65:2181?backup=172.16.230.65:2181,172.16.230.65:2181"/> 
+    <dubbo:reference id="brokerTradeConsumer" interface="com.zendaimoney.thirdpp.trade.pub.service.IBrokerTradeService"  check="false"  retries="0" timeout="90000"/>
+    <dubbo:reference id="baseServiceConsumer" interface="com.zendaimoney.thirdpp.trade.pub.service.IBaseService"  check="false"  retries="0" timeout="90000"/>
+    <dubbo:reference id="authServiceConsumer" interface="com.zendaimoney.thirdpp.trade.pub.service.IAuthService"  check="false"  retries="0" timeout="90000"/> -->
+ 
+ </beans>    
