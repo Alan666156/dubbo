@@ -17,7 +17,7 @@
 <h1 style="color:red;">dubbo consumer test</h1>
 <div class="submitBtns pull-left" style="margin-top:30px;">
 	path: <p>"${ctx}"</p>
-	${staticPath}
+	
 	${springMacroRequestContext.contextPath}
 	<input id="name" type="text" placeholder="请输入" maxlength="16">
 	<button type="button" class="btn btn-primary" onclick="test('customer')">提交</button>

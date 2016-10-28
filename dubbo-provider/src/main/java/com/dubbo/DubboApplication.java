@@ -9,10 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
-@ImportResource({"classpath:dubboContext.xml"}) //加入spring的bean的xml文件
+//@ImportResource({"classpath:dubboContext.xml"}) //加入spring的bean的xml文件
 public class DubboApplication extends SpringBootServletInitializer {
 	private static final Logger LOGGER = LoggerFactory.getLogger(DubboApplication.class);
 	@Override

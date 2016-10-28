@@ -9,18 +9,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.dubbo.service.DubboService;
+import com.dubbo.consumer.DubboTest;
 
 @Controller
 public class IndexController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(IndexController.class);
 	
 	@Autowired
-	private DubboService dubboService;
+	private DubboTest dubboTest;
 	
 	@RequestMapping("/")
 	public String home(Model model, HttpServletRequest request, String name){
-//		dubboService.dubboTest(name);
+		dubboTest.test(name);
 		LOGGER.info("======dubbo test=======");
 		return "home";
 	}

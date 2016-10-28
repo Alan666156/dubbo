@@ -2,10 +2,9 @@ package com.dubbo.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.dubbo.service.DubboService;
-
 
 @Service
 public class DubboServiceImpl implements DubboService {

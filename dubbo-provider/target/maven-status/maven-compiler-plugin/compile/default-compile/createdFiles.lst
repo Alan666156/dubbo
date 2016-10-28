@@ -1,9 +1,0 @@
-com\dubbo\DubboApplication$1.class
-com\dubbo\DubboApplication.class
-com\dubbo\config\SecurityConfig.class
-com\dubbo\config\WebConfig.class
-com\dubbo\config\ZookConfig.class
-com\dubbo\filter\HTMLCharacterFilter.class
-com\dubbo\filter\HTMLCharacterRequest.class
-com\dubbo\config\WebConfig$1.class
-com\dubbo\config\DubboServiceImpl.class
